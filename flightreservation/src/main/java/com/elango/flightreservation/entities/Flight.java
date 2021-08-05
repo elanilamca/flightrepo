@@ -5,7 +5,8 @@ package com.elango.flightreservation.entities;
 
 import java.sql.Timestamp;
 import java.util.Date;
-
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 import javax.persistence.Entity;
 
 /**
@@ -20,6 +21,7 @@ public class Flight extends AbstractEntity {
 	private String operatingAirlines;
 	private String departureCity;
 	private String arrivalCity;
+	@Temporal(TemporalType.DATE)
 	private Date dateOfDeparture;
 	private Timestamp estimatedDepartureTime;
 	
